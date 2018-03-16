@@ -1,12 +1,36 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/projects/projects",
+    "pages/person/person",
+    "pages/donation/donation",
+    "pages/detail/detail",
+    "pages/profile/profile"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "color": "#a9b7b7",
+    "selectedColor": "#d81e06",
+    "borderStyle": "white",
+    "list":[{
+      "selectedIconPath": "images/icon/page1-f.png",
+      "iconPath": "images/icon/page1.png",
+      "pagePath": "pages/projects/projects",
+      "text": "首页"
+    },{
+      "selectedIconPath": "images/icon/page2-f.png",
+      "iconPath": "images/icon/page2.png",
+      "pagePath": "pages/person/person",
+      "text": "发现"
+    },{
+      "selectedIconPath": "images/icon/page3-f.png",
+      "iconPath": "images/icon/page3.png",
+      "pagePath": "pages/donation/donation",
+      "text": "我的"
+    }]
   }
 }

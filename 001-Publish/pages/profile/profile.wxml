@@ -1,0 +1,60 @@
+<!--pages/profile/profile.wxml-->
+<!--index.wxml-->
+<view class="container" style='font-size:80%'>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称            </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view style="display:flex;flex-direction:row;margin:10px 0px 10px 0px">
+    <view style="display:flex;flex-direction:column;align-items:center;margin:0px 25px 15px 40px">
+      <text style='font-weight:lighter;font-size:80%'>参与项目</text>
+      <text style='font-weight:bold;font-size:120%'>6个</text>
+    </view>
+    <view style="display:flex;flex-direction:column;align-items:center;margin:0px 48px 15px 48px">
+      <text style='font-weight:lighter;font-size:80%'>捐赠物资</text>
+      <text style='font-weight:bold;font-size:120%'>34件</text>
+    </view>
+    <view style="display:flex;flex-direction:column;align-items:center;margin:0px 40px 15px 25px">
+      <text style='font-weight:lighter;font-size:80%'>物资金额</text>
+      <text style='font-weight:bold;font-size:120%'>500元</text>
+    </view>
+  </view>
+  <view class="line2-css"></view>
+  <view style="margin:20px">
+    <view>
+      <text style='font-weight:bold'>项目记录</text>
+      <text bindtap="bindViewTap2" style="position:relative;float:right;font-weight:lighter;font-size:73%;margin:2px 0px 0px 0px">查看全部></text>
+      <!-- <button bindtap="bindViewTap2" style="position:relative;float:right;font-size:73%">全部</button> -->
+    </view>
+    <view class="line-css"></view>
+    <view>
+      <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>2017/3/14</text>
+      <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">书送未来</text>
+    </view>
+    <view>
+      <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>2017/3/27</text>
+      <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">书送未来</text>
+    </view>
+  </view>
+    <view class="line2-css"></view>
+  <view style="margin:20px">
+    <view>
+      <text style='font-weight:bold'>物品流向</text>
+      <text bindtap="bindViewTap1" style="position:relative;float:right;font-weight:lighter;font-size:73%;margin:2px 0px 0px 0px">查看全部></text>
+    </view>
+    <view class="line-css"></view>
+    <view>
+      <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>字典</text>
+      <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">已送达</text>
+    </view>
+    <view>
+      <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>识字卡片</text>
+      <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">已下单</text>
+    </view>
+  </view>
+  <view class="line2-css"></view>
+</view>
+ 

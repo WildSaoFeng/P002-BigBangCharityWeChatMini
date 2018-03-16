@@ -1,0 +1,79 @@
+<!--pages/projects/projects.wxml-->
+<view class="container">
+  
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item.url}}" class="slide-image" width="100%" height="100%"/>
+      </swiper-item>
+    </block>
+ </swiper>
+
+  <view class="projects-container" scroll-y="true">
+
+    <view class='projects-title'> 当前项目 </view>
+
+    <view bindtap="bindViewTap" class="flex-wrp one-project-item">
+      <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
+      </image>
+      <view style="flex-direction:column; display:flex;">
+      <text class='title'> 让微笑在寒冬里绽放 </text>
+        <view id='item-tags'> 
+          <view class="zan-tag zan-tag--danger">大礼包</view>
+          <view class="zan-tag zan-tag--danger">儿童</view> 
+        </view> 
+      <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
+      <progress class="item-progress" percent="80" show-info />
+      </view>
+    </view>
+
+    <view bindtap="bindViewTap" class="flex-wrp one-project-item">
+      <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
+      </image>
+      <view style="flex-direction:column; display:flex;">
+      <text class='title'> 让微笑在寒冬里绽放 </text>
+        <view id='item-tags'> 
+          <view class="zan-tag zan-tag--danger">大礼包</view>
+          <view class="zan-tag zan-tag--danger">儿童</view> 
+        </view> 
+      <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
+      <progress class="item-progress" percent="80" show-info />
+      </view>
+    </view>
+
+    <view bindtap="bindViewTap" class="flex-wrp one-project-item">
+      <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
+      </image>
+      <view style="flex-direction:column; display:flex;">
+      <text class='title'> 让微笑在寒冬里绽放 </text>
+        <view id='item-tags'> 
+          <view class="zan-tag zan-tag--danger">大礼包</view>
+          <view class="zan-tag zan-tag--danger">儿童</view> 
+        </view> 
+      <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
+      <progress class="item-progress" percent="80" show-info />
+      </view>
+    </view>
+
+    <view bindtap="bindViewTap" class="flex-wrp one-project-item">
+      <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
+      </image>
+      <view style="flex-direction:column; display:flex;">
+      <text class='title'> 让微笑在寒冬里绽放 </text>
+        <view id='item-tags'> 
+          <view class="zan-tag zan-tag--danger">大礼包</view>
+          <view class="zan-tag zan-tag--danger">儿童</view> 
+        </view> 
+      <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
+      <progress class="item-progress" percent="80" show-info />
+      </view>
+    </view>
+    
+    <view class="line-css"></view>
+    
+    
+  </view>
+
+
+</view>
