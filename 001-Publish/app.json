@@ -30,6 +30,12 @@
       "selectedIconPath": "images/icon/page3-f.png",
       "iconPath": "images/icon/page3.png",
       "pagePath": "pages/donation/donation",
+      "text": "捐助"
+    },
+    {
+      "selectedIconPath": "images/icon/page4-f.png",
+      "iconPath": "images/icon/page4.png",
+      "pagePath": "pages/profile/profile",
       "text": "我的"
     }]
   }

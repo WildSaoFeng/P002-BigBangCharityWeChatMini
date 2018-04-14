@@ -8,68 +8,51 @@
 </view>
 <view wx:else>
   <map id="map" longitude="{{defaultLocation.longitute}}" latitude="{{defaultLocation.latitude}}" 
-    scale="13" controls="{{controls}}" bindcontroltap="controltap" markers="{{defaultMarkers}}" 
+    scale="11" controls="{{controls}}" bindcontroltap="controltap" markers="{{defaultMarkers}}" 
     bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange"
      show-location style="width: 100%; height: 300px;"></map> 
 </view>  
 
 <view class="projects-container" scroll-y="true">
 
-    <view class='projects-title'> 当前项目 </view>
+    <view class="zan-panel-title">附近救助点</view>
 
     <view bindtap="bindViewTap" class="flex-wrp one-project-item">
-      <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
+      <image class="item-pic" src="../../images/p2/p3.jpeg">
       </image>
       <view style="flex-direction:column; display:flex;">
-      <text class='title'> 让微笑在寒冬里绽放 </text>
+      <text class='title'> 中财信院青年志愿者协会 </text>
         <view id='item-tags'> 
-          <view class="zan-tag zan-tag--danger">大礼包</view>
-          <view class="zan-tag zan-tag--danger">儿童</view> 
+          <view class="zan-tag zan-tag--danger">学校</view>
+          <view class="zan-tag zan-tag--primary">认证机构</view> 
         </view> 
-      <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
-      <progress class="item-progress" percent="80" show-info />
+      <text class='item-brief'>欢迎来到中央财经大学信息学院青年志愿者协会！欢迎报名志愿！</text>
       </view>
     </view>
 
     <view bindtap="bindViewTap" class="flex-wrp one-project-item">
-      <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
+      <image class="item-pic" src="../../images/p2/p1.jpg">
       </image>
       <view style="flex-direction:column; display:flex;">
-      <text class='title'> 让微笑在寒冬里绽放 </text>
+      <text class='title'> 中国同心相随志愿者发展中心 </text>
         <view id='item-tags'> 
-          <view class="zan-tag zan-tag--danger">大礼包</view>
-          <view class="zan-tag zan-tag--danger">儿童</view> 
+          <view class="zan-tag zan-tag--danger">医疗救助</view>
+          <view class="zan-tag zan-tag--primary">认证机构</view> 
         </view> 
-      <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
-      <progress class="item-progress" percent="80" show-info />
+      <text class='item-brief'>欢迎来到中国同心相随志愿者发展中心，检测、预防知识普及点！</text>
       </view>
     </view>
 
     <view bindtap="bindViewTap" class="flex-wrp one-project-item">
-      <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
+      <image class="item-pic" src="../../images/p2/p2.jpg">
       </image>
       <view style="flex-direction:column; display:flex;">
-      <text class='title'> 让微笑在寒冬里绽放 </text>
+      <text class='title'> 北京市牡丹园志愿者协会 </text>
         <view id='item-tags'> 
-          <view class="zan-tag zan-tag--danger">大礼包</view>
-          <view class="zan-tag zan-tag--danger">儿童</view> 
+          <view class="zan-tag zan-tag--danger">医疗救助</view>
+          <view class="zan-tag zan-tag--primary">认证机构</view> 
         </view> 
-      <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
-      <progress class="item-progress" percent="80" show-info />
-      </view>
-    </view>
-
-    <view bindtap="bindViewTap" class="flex-wrp one-project-item">
-      <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
-      </image>
-      <view style="flex-direction:column; display:flex;">
-      <text class='title'> 让微笑在寒冬里绽放 </text>
-        <view id='item-tags'> 
-          <view class="zan-tag zan-tag--danger">大礼包</view>
-          <view class="zan-tag zan-tag--danger">儿童</view> 
-        </view> 
-      <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
-      <progress class="item-progress" percent="80" show-info />
+      <text class='item-brief'>欢迎来到北京市牡丹园志愿者协会，慈善衣物制定募捐点！</text>
       </view>
     </view>
     

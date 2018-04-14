@@ -1,34 +1,142 @@
 <!--pages/donation/donation.wxml-->
-<view class='container'>
-  <view class='order-info'>
-    <text>
-      订单申明：xxxxx
-    </text>
-  </view>
+<import src="../../lib/stepper/index.wxml"/>
+<import src="../../lib/field/index.wxml"/>
+<import src="../../lib/select/index.wxml" />
+<import src="../../lib/toast/index.wxml" />
 
-  <template name='order-item'>
-    
-  </template>
+<view class='container'>
 
   <view class='order-table'>
     <view class="projects-container" scroll-y="true">
-      <view class='projects-title'> 可捐物品 </view>
+      <view class="zan-panel-title">可捐物品</view>
 
-      <view bindtap="bindViewTap" class="flex-wrp one-project-item">
-        <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
+      <view class="flex-wrp one-project-item">
+        <image class="item-pic" src="../../images/goods/p1.jpeg">
         </image>
-        <view style="flex-direction:column; display:flex;">
-        <text class='title'> 让微笑在寒冬里绽放 </text>
-          <view id='item-tags'> 
-            <view class="zan-tag zan-tag--danger">大礼包</view>
-            <view class="zan-tag zan-tag--danger">儿童</view> 
-          </view> 
-        <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
-        <progress class="item-progress" percent="80" show-info />
+        <view class='item-right'>
+          <text class='title'> 男式冬衣（余2件）</text>
+            <view id='item-tags'> 
+              <view class="zan-tag zan-tag--danger">二手闲置</view>
+              <view class="zan-tag zan-tag--danger">型号:180-185</view> 
+            </view> 
+          <text class='item-brief'>请务必确保清洗干净</text>
+          <template is="zan-stepper" data="{{ ...stepper1, componentId: 'stepper1', size: 'small'}}"></template>
         </view>
       </view>
 
-      <view class="line-css"></view>
+      <view class="flex-wrp one-project-item">
+        <image class="item-pic" src="../../images/goods/p2.jpeg">
+        </image>
+        <view class='item-right'>
+          <text class='title'> 文学著作（余1件） </text>
+            <view id='item-tags'> 
+              <view class="zan-tag zan-tag--danger">二手闲置</view>
+              <view class="zan-tag zan-tag--danger">适宜年龄:8-15</view> 
+            </view> 
+          <text class='item-brief'>请务必确保儿童宜读</text>
+          <template is="zan-stepper" data="{{ ...stepper2, componentId: 'stepper2', size: 'small'}}"></template>
+        </view>
+      </view>
+
+      <view class="flex-wrp one-project-item">
+        <image class="item-pic" src="../../images/goods/p3.jpeg">
+        </image>
+        <view class='item-right'>
+          <text class='title'> 工具书（余4件） </text>
+            <view id='item-tags'> 
+              <view class="zan-tag zan-tag--danger">二手闲置</view>
+              <view class="zan-tag zan-tag--danger">类型：中文或英文</view> 
+            </view> 
+          <text class='item-brief'>请务必确保八成新</text>
+          <template is="zan-stepper" data="{{ ...stepper3, componentId: 'stepper3', size: 'small'}}"></template>
+        </view>
+      </view>
+
+      <view class="flex-wrp one-project-item">
+        <image class="item-pic" src="../../images/goods/p4.jpeg">
+        </image>
+        <view class='item-right'>
+          <text class='title'> 便携药盒（余2件） </text>
+            <view id='item-tags'> 
+              <view class="zan-tag zan-tag--primary">要求新购</view> 
+            </view> 
+          <text class='item-brief'>请务必确保达到食品级安全</text>
+          <template is="zan-stepper" data="{{ ...stepper4, componentId: 'stepper4', size: 'small'}}"></template>
+        </view>
+      </view>
+      <!--5 -->
+      <view class="flex-wrp one-project-item">
+        <image class="item-pic" src="../../images/goods/p5.jpeg">
+        </image>
+        <view class='item-right'>
+          <text class='title'> 老人围巾（余4件） </text>
+            <view id='item-tags'> 
+              <view class="zan-tag zan-tag--primary">要求新购</view>
+            </view> 
+          <text class='item-brief'>请务必确保清洗干净</text>
+          <template is="zan-stepper" data="{{ ...stepper5, componentId: 'stepper5', size: 'small'}}"></template>
+        </view>
+      </view>
+
+      <view class="flex-wrp one-project-item">
+        <image class="item-pic" src="../../images/goods/p6.jpeg">
+        </image>
+        <view class='item-right'>
+          <text class='title'> 文具袋（余2件） </text>
+            <view id='item-tags'> 
+              <view class="zan-tag zan-tag--primary">要求新购</view>
+            </view> 
+          <text class='item-brief'>请尽量挑选孩子们喜欢的样式</text>
+          <template is="zan-stepper" data="{{ ...stepper6, componentId: 'stepper6', size: 'small'}}"></template>
+        </view>
+      </view>
+      
+      
+      <view class="zan-panel-title">募捐人信息</view>
+        <view class="zan-panel">
+          <template
+            is="zan-field"
+            data="{{ ...config.base.name, value }}"></template>
+          <template
+            is="zan-field"
+            data="{{ ...config.base.tel }}"></template>
+          <template
+            is="zan-field"
+            data="{{ ...config.base.address }}"></template>
+        </view>
+
+        <view class="zan-panel-title">选择募捐方式</view>
+          <view class="zan-panel">
+            <view>
+              <template is="zan-select" data="{{ items, checkedValue: checked.base, activeColor, componentId: 'base' }}" ></template>
+            </view>
+        </view>   
+
+        <view class="zan-btns">
+          <button
+            class="zan-btn zan-btn--primary"
+            bindtap="toggleBottomPopup">已确认信息，选择捐赠项目</button>
+        </view>
+        <template is="zan-toast" data="{{ zanToast }}"></template>
+
     </view>
   </view>
+
+  <view class="popup-example--bottom zan-popup zan-popup--bottom {{ showBottomPopup ? 'zan-popup--show' : ''}}">
+    <view class="zan-popup__mask" catchtap="toggleBottomPopup"></view>
+    <view class="zan-popup__container">
+      <view class="zan-btns">
+        <button class="zan-btn zan-btn--disabled" disabled>微笑大礼包（已完结）</button>
+        <button class="zan-btn zan-btn--disabled" disabled>牡丹园冬衣（已完结）</button>
+        <button class="zan-btn zan-btn--disabled" disabled>儿童心理辅导（筹备中）</button>
+        <button class="zan-btn zan-btn--disabled" disabled>汇晨养老院（已完结）</button>
+        <button class="zan-btn zan-btn--disabled" disabled>益童中心（已完结）</button>
+        <button class="zan-btn " bindtap='showToast'>测试捐赠点（开发测试用）</button>
+        <button class="zan-btn" catchtap="toggleBottomPopup">
+          取消募捐
+        </button>
+      </view>
+    </view>
+  </view>
+  
 </view>

@@ -11,49 +11,75 @@
   <view style="display:flex;flex-direction:row;margin:10px 0px 10px 0px">
     <view style="display:flex;flex-direction:column;align-items:center;margin:0px 25px 15px 40px">
       <text style='font-weight:lighter;font-size:80%'>参与项目</text>
-      <text style='font-weight:bold;font-size:120%'>6个</text>
+      <text style='font-weight:bold;font-size:120%'>{{make_pro}}个</text>
     </view>
     <view style="display:flex;flex-direction:column;align-items:center;margin:0px 48px 15px 48px">
       <text style='font-weight:lighter;font-size:80%'>捐赠物资</text>
-      <text style='font-weight:bold;font-size:120%'>34件</text>
+      <text style='font-weight:bold;font-size:120%'>{{make_num}}件</text>
     </view>
     <view style="display:flex;flex-direction:column;align-items:center;margin:0px 40px 15px 25px">
-      <text style='font-weight:lighter;font-size:80%'>物资金额</text>
-      <text style='font-weight:bold;font-size:120%'>500元</text>
+      <text style='font-weight:lighter;font-size:80%'>爱心指数</text>
+      <text style='font-weight:bold;font-size:120%'>{{make_love}}点</text>
     </view>
   </view>
   <view class="line2-css"></view>
   <view style="margin:20px">
     <view>
       <text style='font-weight:bold'>项目记录</text>
-      <text bindtap="bindViewTap2" style="position:relative;float:right;font-weight:lighter;font-size:73%;margin:2px 0px 0px 0px">查看全部></text>
+      
       <!-- <button bindtap="bindViewTap2" style="position:relative;float:right;font-size:73%">全部</button> -->
     </view>
     <view class="line-css"></view>
-    <view>
-      <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>2017/3/14</text>
-      <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">书送未来</text>
+
+    <view wx:if="{{isSaoFeng}}">
+      <view>
+        <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>2018/1/15</text>
+        <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">益童成长</text>
+      </view>
+      <view>
+        <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>2017/12/30</text>
+        <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">汇晨养老院</text>
+      </view>
+      <view>
+        <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>2017/11/26</text>
+        <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">牡丹园冬衣</text>
+      </view>
+        <view>
+          <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>2017/11/11</text>
+          <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">大礼包</text>
+        </view>
+      </view>
     </view>
-    <view>
-      <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>2017/3/27</text>
-      <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">书送未来</text>
-    </view>
-  </view>
+    
     <view class="line2-css"></view>
   <view style="margin:20px">
     <view>
       <text style='font-weight:bold'>物品流向</text>
-      <text bindtap="bindViewTap1" style="position:relative;float:right;font-weight:lighter;font-size:73%;margin:2px 0px 0px 0px">查看全部></text>
     </view>
     <view class="line-css"></view>
-    <view>
-      <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>字典</text>
-      <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">已送达</text>
+    <view wx:if="{{isSaoFeng}}">
+      <view>
+        <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>字典 x2</text>
+        <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">已送达</text>
+      </view>
+      <view>
+        <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>冬衣 x3</text>
+        <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">已送达</text>
+      </view>
+      <view>
+        <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>笔 x20</text>
+        <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">已送达</text>
+      </view>
+      <view>
+        <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>笔袋 x5</text>
+        <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">已送达</text>
+      </view>
+      <view>
+        <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>药盒 x4</text>
+        <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">已送达</text>
+      </view>
     </view>
-    <view>
-      <text style='font-weight:lighter;font-size:85% ;margin:20px 0px'>识字卡片</text>
-      <text style="position:relative;float:right;font-size:85%;color:#666;margin:0px 5px">已下单</text>
-    </view>
+    
   </view>
   <view class="line2-css"></view>
 </view>

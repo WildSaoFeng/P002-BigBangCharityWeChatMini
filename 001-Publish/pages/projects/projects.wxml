@@ -1,4 +1,6 @@
 <!--pages/projects/projects.wxml-->
+<import src="../../lib/toast/index.wxml" />
+
 <view class="container">
   
   <swiper indicator-dots="{{indicatorDots}}"
@@ -12,67 +14,86 @@
 
   <view class="projects-container" scroll-y="true">
 
-    <view class='projects-title'> 当前项目 </view>
+    <view class="zan-panel-title">当前项目</view>
 
-    <view bindtap="bindViewTap" class="flex-wrp one-project-item">
+    <view bindtap="dlb_finishedToast" class="flex-wrp one-project-item">
       <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
       </image>
       <view style="flex-direction:column; display:flex;">
       <text class='title'> 让微笑在寒冬里绽放 </text>
         <view id='item-tags'> 
-          <view class="zan-tag zan-tag--danger">大礼包</view>
-          <view class="zan-tag zan-tag--danger">儿童</view> 
+          <view class="zan-tag zan-tag--primary">已完成</view>
+          <view class="zan-tag zan-tag--primary zan-tag--disabled">大礼包</view>
+          <view class="zan-tag zan-tag--primary zan-tag--disabled ">儿童</view> 
         </view> 
       <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
-      <progress class="item-progress" percent="80" show-info />
+      <progress class="item-progress" percent="100" show-info />
       </view>
     </view>
 
-    <view bindtap="bindViewTap" class="flex-wrp one-project-item">
-      <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
+    <view bindtap="dy_finishedToast" class="flex-wrp one-project-item">
+      <image class="item-pic" src="../../images/p1/p1.jpg">
       </image>
       <view style="flex-direction:column; display:flex;">
-      <text class='title'> 让微笑在寒冬里绽放 </text>
+      <text class='title'> 牡丹园冬衣募捐活动 </text>
         <view id='item-tags'> 
-          <view class="zan-tag zan-tag--danger">大礼包</view>
-          <view class="zan-tag zan-tag--danger">儿童</view> 
+          <view class="zan-tag zan-tag--primary">已完成</view>
+          <view class="zan-tag zan-tag--primary zan-tag--disabled">闲置冬衣</view>
+          <view class="zan-tag zan-tag--primary zan-tag--disabled">流浪汉</view> 
         </view> 
-      <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
-      <progress class="item-progress" percent="80" show-info />
+      <text class='item-brief'>牡丹园男式冬衣收募中，欢迎参与到其中来吧！</text>
+      <progress class="item-progress" percent="100" show-info />
       </view>
     </view>
 
-    <view bindtap="bindViewTap" class="flex-wrp one-project-item">
-      <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
+    <view bindtap="notStartToast" class="flex-wrp one-project-item">
+      <image class="item-pic" src="../../images/p1/p4.jpg">
       </image>
       <view style="flex-direction:column; display:flex;">
-      <text class='title'> 让微笑在寒冬里绽放 </text>
+      <text class='title'> 儿童心理辅导招募 </text>
         <view id='item-tags'> 
-          <view class="zan-tag zan-tag--danger">大礼包</view>
-          <view class="zan-tag zan-tag--danger">儿童</view> 
+          <view class="zan-tag zan-tag--danger zan-tag--plain">即将开展</view>
+          <view class="zan-tag zan-tag--primary zan-tag--disabled">特殊资源</view>
+          <view class="zan-tag zan-tag--primary zan-tag--disabled">志愿招募</view> 
         </view> 
-      <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
-      <progress class="item-progress" percent="80" show-info />
+      <text class='item-brief'> 协百家教育，青海玉树地震孩子心理辅导，敬请期待！</text>
+      <progress class="item-progress" percent="0" show-info />
       </view>
     </view>
 
-    <view bindtap="bindViewTap" class="flex-wrp one-project-item">
-      <image class="item-pic" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg">
+    <view bindtap="hc_finishedToast" class="flex-wrp one-project-item">
+      <image class="item-pic" src="../../images/p1/p3.jpg">
       </image>
       <view style="flex-direction:column; display:flex;">
-      <text class='title'> 让微笑在寒冬里绽放 </text>
+      <text class='title'> 温暖汇晨老人心 </text>
         <view id='item-tags'> 
-          <view class="zan-tag zan-tag--danger">大礼包</view>
-          <view class="zan-tag zan-tag--danger">儿童</view> 
+          <view class="zan-tag zan-tag--primary">已完成</view>
+          <view class="zan-tag zan-tag--primary zan-tag--disabled">便携药盒</view>
+          <view class="zan-tag zan-tag--primary zan-tag--disabled">孤独老人</view> 
         </view> 
-      <text class='item-brief'>为贵州山区遭受凝冻灾害的孩子送去温暖的大礼包</text>
-      <progress class="item-progress" percent="80" show-info />
+      <text class='item-brief'>这个冬天，北京市汇晨养老院的老人们需要一份关怀！</text>
+      <progress class="item-progress" percent="100" show-info />
+      </view>
+    </view>
+
+    <view bindtap="yt_finishedToast" class="flex-wrp one-project-item">
+      <image class="item-pic" src="../../images/p1/p2.jpg">
+      </image>
+      <view style="flex-direction:column; display:flex;">
+      <text class='title'> 益童成长中心助力成长 </text>
+        <view id='item-tags'> 
+          <view class="zan-tag zan-tag--primary">已完成</view>
+          <view class="zan-tag zan-tag--primary zan-tag--disabled">文具</view>
+          <view class="zan-tag zan-tag--primary zan-tag--disabled">震后灾儿</view> 
+        </view> 
+      <text class='item-brief'>青海玉树儿童来京上学，捐赠文具，点燃希望！</text>
+      <progress class="item-progress" percent="100" show-info />
       </view>
     </view>
     
     <view class="line-css"></view>
     
-    
+    <template is="zan-toast" data="{{ zanToast }}"></template>
   </view>
 
 

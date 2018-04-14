@@ -20,10 +20,33 @@ Page({
       height: 25,
       alpha: 0.5,
       label: {
-        content:'我的位置',
-        
+        content:'中央财经大学信息学院青协',
       },
-    }],
+    }, {
+      latitude: 39.966596,
+      longitude: 116.374054,
+      name: '中国同心相随志愿者发展中心',
+      iconPath: '../../images/icon/page2-f.png',
+      desc: '现在位置',
+      width: 25,
+      height: 25,
+      alpha: 0.5,
+      label: {
+        content: '中国同心相随志愿者发展中心',
+      },
+      }, {
+        latitude: 40.002898,
+        longitude: 116.380234,
+        name: '北京市牡丹园志愿者协会',
+        iconPath: '../../images/icon/page2-f.png',
+        desc: '现在位置',
+        width: 25,
+        height: 25,
+        alpha: 0.5,
+        label: {
+          content: '北京市牡丹园志愿者协会',
+        },
+      }],
     userHasLocation: false,
   },
 

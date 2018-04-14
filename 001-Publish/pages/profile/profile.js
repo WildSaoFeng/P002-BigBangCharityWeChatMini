@@ -7,7 +7,11 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    make_pro: 0,
+    make_num: 0,
+    make_love: 0,
+    isSaoFeng: false
   },
   //事件处理函数
   bindViewTap1: function () {
@@ -46,6 +50,15 @@ Page({
           })
         }
       })
+    }
+    if(app.globalData.userInfo.nickName=='CellPhone'){
+      console.log('You Are SaoFeng!');
+      this.setData({
+        make_pro: 4,
+        make_num: 34,
+        make_love: 608,
+        isSaoFeng: true,
+      });
     }
   }
 })
